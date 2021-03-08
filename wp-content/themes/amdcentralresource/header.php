@@ -15,5 +15,3 @@
 			<h1 class="header_heading"><a href="<?php get_home_url(); ?>" title="<?php echo $siteTitle; ?>" class="header_heading_link"><?php echo $siteTitle; ?></a></h1>
 		</div>
 	</header>
-</body>
-</html>
