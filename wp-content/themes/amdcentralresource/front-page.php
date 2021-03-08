@@ -17,7 +17,6 @@
 			<li class="latest_post_list">
 				<h3 class="latest_post_heading"><?php the_title(); ?></h3>
 				<p class="latest_post_content"><?php the_excerpt(); ?></p>
-			<!-- <p class="latest_post_content"><?php //the_content(); ?></p> -->
 			<a href="<?php the_permalink(); ?>" title="Read More" class="read_btn">Read More</a>
 			</li>
 		</ul>
