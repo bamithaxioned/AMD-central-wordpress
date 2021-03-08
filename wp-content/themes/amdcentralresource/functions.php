@@ -19,4 +19,48 @@
 		);
 	};
 	add_action('init', 'amd_display_menus');
+
+	#CUSTOM POST - SPORTS
+	function custom_post_sports()
+	{
+ 		$labels = array(
+	        'name' => 'Sports',
+	        'singular_name' => 'Sport', //Used inside admin Panel
+	        'add_new' => 'Add Sport',
+	        'all_items' => 'All Items',
+	        'add_new_item' => 'Add Item',
+	        'edit_item' => 'Edit Item',
+	        'new_item' => 'New Item',
+	        'view_item' => 'View Item',
+	        'search_item' => 'Search Sport',
+	        'not_found' => 'No items found',
+	        'not _found_in_trash' => 'No items found in trash',
+	        'parent_item_colon' => 'Parent Item'
+    	);
+
+		$supports = array(
+			'title',
+	        'editor',
+	        'excerpt',
+	        'thumbnail',
+	        'revisions'
+	    );
+
+		$args = array(
+			'labels' => $labels,
+			'supports' => $supports,
+	        'public' => true,
+	        'has_archive' => true,
+	        'publicly_queryable' => 'true',
+	        'query_var' => true,
+	        'rewrite' => true,
+	        'capability_type' => 'post',
+	        'hierarchical' => false,
+	        'taxonomies' => array('category', 'post_tag'),
+	        'menu_position' => 4,
+	        'exclude_from_search' => false,
+		);
+		register_post_type('sports', $args);
+	};
+	add_action('init', 'custom_post_sports');
 ?>
