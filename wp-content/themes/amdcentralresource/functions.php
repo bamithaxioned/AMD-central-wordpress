@@ -11,7 +11,7 @@
 	function amd_display_menus()
 	{
 		add_theme_support('menus');
-		register_nav_menu(
+		register_nav_menus(
 			array(
 				'top-menu' => "Header Menu",
 				'footer-menu' => 'Footer Menu'
