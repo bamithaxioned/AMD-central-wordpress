@@ -20,7 +20,7 @@
 						<ul class="latest_post">
 				<?php while($displayBlog->have_posts()) : $displayBlog->the_post() ?>
 					<li class="latest_post_list">
-						<h3 class="latest_post_heading"><?php the_title(); ?></h3>
+						<h3 class="latest_post_heading ft-30px"><?php the_title(); ?></h3>
 						<p class="latest_post_content"><?php the_excerpt(); ?></p>
 					<a href="<?php the_permalink(); ?>" class="read_btn" title="Read More">Read More</a>
 					</li>
