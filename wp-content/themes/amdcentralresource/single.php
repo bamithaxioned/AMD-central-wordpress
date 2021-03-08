@@ -4,6 +4,7 @@
 	$blogPageLink = get_permalink(get_option( 'page_for_posts' ));
 	$imageWidth = $image['width'];
 	$imageHeight = $image['height'];
+	$email = get_field('email');
 ?>
 
  <section class="display_latest_post">
@@ -15,6 +16,7 @@
  						<img src="<?php echo $image['url']; ?>" width="<?php echo $imageWidth; ?>" height="<?php echo $imageHeight; ?>">
  					</figure>
  					<h2 class="latest_post_heading"><?php the_title(); ?></h2>
+ 					<span class="email">Email Id: <?php echo $email; ?></span>
  					<p class="latest_post_content"><?php the_content(); ?></p>
  				</li>
 			<?php
